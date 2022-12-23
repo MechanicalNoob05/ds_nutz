@@ -1,0 +1,197 @@
+@font-face {
+  font-family: mydssa;
+  src: url(../public/fonts/GreatVibes-Regular.ttf);
+}
+.view {
+  position: absolute;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -3vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  z-index: -2;
+}
+
+.mainview {
+  background: url('../public/Landingbackground.jpg');
+  height: 100vh;
+  width: 500vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* **********************Sections********************************************************************** */
+
+.section2 {
+  position: absolute;
+  transform: translate(200vw, 0);
+  /* background-color: rgba(0, 255, 255, 0.149); */
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.section1 {
+  position: absolute;
+  transform: translate(0, 0);
+  min-height: 100vh;
+  width: 200vw;
+}
+
+.section3 {
+  position: absolute;
+  transform: translate(300vw, 0);
+  min-height: 100vh;
+  width: 200vw;
+}
+
+/***********************section2 details****************************/
+
+.logo_name {
+  position: relative;
+  left: 18.5vw;
+  font-size: 14vw;
+  top: 10vh;
+  color: white;
+  display: inline;
+  font-weight: 700;
+  font-family: mydssa;
+}
+
+.logo_attri {
+  display: flex;
+  position: relative;
+  left: 27vw;
+  width: 45vw;
+  top: 5vh;
+  justify-content: space-between;
+}
+
+.logo_attri1,
+.logo_attri2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo_attri1 .logo_attri1_name,
+.logo_attri2 .logo_attri2_name {
+  font-size: 3vw;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  width: 18vw;
+}
+
+.logo_attri1 .logo_attri1_des,
+.logo_attri2 .logo_attri2_des {
+  font-size: 1.3vw;
+  display: inline;
+  text-align: center;
+  width: 18vw;
+  font-weight: 350;
+}
+
+.Navigation {
+  width: 90vw;
+  position: relative;
+  left: 5vw;
+  top: 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_attri1,
+.nav_attri2 {
+  display: flex;
+  width: 12vw;
+  justify-content: space-around;
+  font-weight: 600;
+}
+
+.nav_attri1 .nav_attri1_arrow,
+.nav_attri2 .nav_attri2_arrow {
+  height: 3vh;
+  width: 2vw;
+}
+
+.scroll_ui {
+  position: relative;
+  left: 43vw;
+  top: 35vh;
+  font-size: 1.3vw;
+  color: white;
+}
+
+.scroll_ui .shine {
+  font-size: 1.5vw;
+  color: white;
+}
+
+.scroll_ui .nav_attri1_arrow,
+.scroll_ui .nav_attri2_arrow {
+  height: 5vh;
+  width: 2vw;
+}
+
+/* **********************************nav*************************************************** */
+
+.extraNav {
+  position: fixed;
+}
+
+.extraNav .extraNav1 {
+  position:relative;
+  color: white;
+  display: inline;
+}
+
+.extraNav .extraNav2 {
+  position: absolute;
+  font-size: 1.5vw;
+  top: 6vh;
+  color: white;
+  display: inline;
+}
+
+.smallnav1 {
+  justify-content: right;
+  right: 0;
+  display: flex;
+  position: fixed;
+}
+
+.logo {
+  font-size: 2vw;
+  position: absolute;
+  top: 0vw;
+}
+
+.navitem {
+  font-size: 1.5vw;
+  color: white;
+  margin: 1vw;
+  display: inline;
+}
+/* **********************************section1*************************************************** */
+.Sectionname1 {
+  position: absolute;
+  font-size: 10vw;
+  left: 3vw;
+  top: 69vh;
+  color: white;
+  font-weight: 700;
+  display: inline;
+}
+/* **********************************section3*************************************************** */
+.Sectionname2{
+  position: absolute;
+  right: 3vw;
+font-size: 10vw;
+top: 69vh;
+color: white;
+font-weight: 700;
+display: inline;
+}
