@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: myoverall;
+    src: url(../public/fonts/LifeSavers-Regular.ttf);
+  }
+* {
+    transition: opacity 0.3s linear;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    font-family: myoverall;
+  }
+::-webkit-scrollbar {
+    width: 0.1px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.title {
+  background: linear-gradient( 180deg,rgba(74,108,247,0.4) 0%,rgba(74,108,247,0) 100% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  /* opacity: .5; */
+  font-weight: 900;
+}

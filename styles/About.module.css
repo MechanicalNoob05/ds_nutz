@@ -1,0 +1,150 @@
+
+.spepcial_link {
+    position: relative;
+    text-decoration: none !important;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: .9rem; }
+    .spepcial_link:before {
+      position: absolute;
+      z-index: -1;
+      background: #ffc107;
+      content: "";
+      width: 100%;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease;
+      left: 0;
+      bottom: 0;
+      top: 50%;
+      width: 0; }
+    .spepcial_link:hover {
+      color: #000; }
+      .spepcial_link:hover:before {
+        width: 100%; }
+
+        /* **********************************experience************************************** */
+#experience {
+    padding: 100px 0;
+}
+
+.experience-row {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.experience-row h3 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #425BB5;
+    font-size: 16px;
+    font-weight: bold
+}
+
+.experience-row p {
+    color: #888;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.experience-row .date {
+    color: #000;
+    font-size: 17px;
+}
+
+.timeline {
+    padding-left: 0;
+    list-style: none;
+    position: relative;
+}
+
+.timeline:before {
+    background-color: black;
+    content: '';
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 2px;
+    height: 100%;
+}
+
+.timelineevent {
+    position: relative;
+}
+
+.timelineevent:hover .timelineeventicon {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: #425BB5;
+}
+
+.timelineevent:hover .timelineeventthumbnail {
+    box-shadow: inset 40em 0 0 0 #425BB5;
+}
+
+.timelineeventcopy {
+    position: relative;
+    top: -1.875em;
+    left: 4em;
+    width: 70vw;
+    overflow: hidden;
+}
+
+.timelineeventcopy h3 {
+    font-size: 1.75em;
+}
+
+.timelineeventcopy h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.timelineeventcopy strong {
+    font-weight: 700;
+}
+
+.timelineeventcopy p:not(.timelineeventthumbnail) {
+    padding-bottom: 1.2em;
+}
+
+.timelineeventicon {
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #425BB5;
+    outline: 10px solid #f3f3f3;
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 1em;
+    height: 1em;
+}
+
+.timelineeventthumbnail {
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in 0.1s;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: black;
+    box-shadow: inset 0 0 0 0em #425BB5;
+    display: inline-block;
+    margin-bottom: 1.2em;
+    padding: 0.25em 1em 0.2em 1em;
+}
+
+
+
+
