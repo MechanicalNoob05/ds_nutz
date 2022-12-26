@@ -2,13 +2,27 @@ import Link from 'next/link'
 import React,{useState,useEffect} from 'react'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
-import Blog from "../middlware/models/blog.js"
-import mongoose from "mongoose";
-const Blogs = (props) => {
+const Blog = () => {
     const [blog, setblog] = useState([])
     useEffect(() => {
-        setblog(props.blog.blogs)
+        getblog()
     }, [])
+    
+    const getblog = async () => {
+        const response = await fetch("./api/Getallblog", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json;charset=UTF-8",
+            },
+            // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify({}) // body data type must match "Content-Type" header
+        });
+        const  json5 = await response.json()
+        // console.log(json5)
+        if(json5.success){
+            setblog(json5.blog)
+        }
+      }
     return (
         <div className='dark:bg-gray-900 bg-gray-50'>
             <Navbar />
@@ -52,19 +66,7 @@ const Blogs = (props) => {
         </div>
     )
 }
-export async function getServerSideProps(context) {
-    if(!mongoose.connections[0].readystate){
-        await mongoose.connect("mongodb+srv://Manish0302:seeta11102007@dssa.ikisp2i.mongodb.net/test")
-    }
-    var blogs = await Blog.find()
-          if (!blogs) {
-            var success=false
-            return json({ error:"No blog Found"});
-          }
-          var success=true
-          var blog=JSON.parse(JSON.stringify({success,blogs}))
-    return {
-      props: {blog}, // will be passed to the page component as props
-    }
-  }
-export default Blogs
+
+
+
+export default Blog
