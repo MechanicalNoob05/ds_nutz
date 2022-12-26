@@ -1,0 +1,34 @@
+.dashboard_container{
+    padding: 2vh 0vh;
+    height: 100%;
+}
+.stats{
+    background-color: aliceblue;
+    padding: 1vh;
+    border-radius: 1vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    max-height: 85vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.card{
+    margin: 1vh;
+    padding: 5vh;
+    width: 20vh;
+    border-radius: 1vh;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20vh;
+}
+.card h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.card span{
+    text-align: center;
+    text-transform: uppercase;
+}

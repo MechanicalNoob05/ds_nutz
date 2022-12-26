@@ -1,0 +1,8 @@
+.page_display_container{
+    padding: 2vh;
+    height: fit-content;
+}
+.title{
+    padding: 1vh;
+    border-bottom: 1px solid grey;
+}
