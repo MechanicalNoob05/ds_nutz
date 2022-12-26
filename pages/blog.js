@@ -2,27 +2,11 @@ import Link from 'next/link'
 import React,{useState,useEffect} from 'react'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
-const Blog = () => {
+const Blog = (props) => {
     const [blog, setblog] = useState([])
     useEffect(() => {
-        getblog()
+        setblog(props.json5.blog)
     }, [])
-    
-    const getblog = async () => {
-        const response = await fetch("./api/Getallblog", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json;charset=UTF-8",
-            },
-            // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            body: JSON.stringify({}) // body data type must match "Content-Type" header
-        });
-        const  json5 = await response.json()
-        // console.log(json5)
-        if(json5.success){
-            setblog(json5.blog)
-        }
-      }
     return (
         <div className='dark:bg-gray-900 bg-gray-50'>
             <Navbar />
@@ -66,5 +50,18 @@ const Blog = () => {
         </div>
     )
 }
-
+export async function getServerSideProps(context) {
+        const response = await fetch("http://localhost:3000/api/Getallblog", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json;charset=UTF-8",
+            },
+            // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify({}) // body data type must match "Content-Type" header
+        });
+        const  json5 = await response.json()
+    return {
+      props: {json5}, // will be passed to the page component as props
+    }
+  }
 export default Blog
