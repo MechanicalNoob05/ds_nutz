@@ -51,7 +51,7 @@ const Blog = (props) => {
     )
 }
 export async function getServerSideProps(context) {
-        const response = await fetch("http://localhost:3000/api/Getallblog", {
+        const response = await fetch("https://dssaassociation.netlify.app/api/Getallblog", {
             method: "POST",
             headers: {
                 "Content-type": "application/json;charset=UTF-8",
